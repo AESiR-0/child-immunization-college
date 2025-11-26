@@ -3,6 +3,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Modern Vibrant Color Palette */
+  --blue-primary: #3B82F6;
+  --blue-light: #60A5FA;
+  --blue-dark: #2563EB;
+  --teal-primary: #14B8A6;
+  --teal-light: #5EEAD4;
+  --teal-dark: #0D9488;
+  --indigo-primary: #6366F1;
+  --indigo-light: #818CF8;
+  --indigo-dark: #4F46E5;
+  --green-success: #10B981;
+  --green-light: #34D399;
+  --green-dark: #059669;
 }
 
 @theme inline {
@@ -22,5 +36,33 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, transform, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Modern shadow utilities */
+.shadow-modern {
+  box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.3);
+}
+
+.shadow-modern-teal {
+  box-shadow: 0 10px 40px -10px rgba(20, 184, 166, 0.3);
+}
+
+.shadow-modern-indigo {
+  box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.3);
 }
